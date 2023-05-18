@@ -15,7 +15,6 @@ export default function Home({ calendars }) {
             <p >{u.url}</p>
             <pre >
               {/* {JSON.stringify(u, null, 2)} */}
-
             </pre>
           </div>
         )

@@ -1,3 +1,5 @@
+import prisma from '../../lib/prisma'
+
 import ICAL from 'ical.js';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -23,7 +25,7 @@ export default async function handler(req, res) {
 
         // const res = await fetch('https://jgdev.xyz/rr.ics');
         const dir = path.join(process.cwd(), 'ics-cache');
-        let file = dir + '/' + calendar.id + '.ics';
+        let file = dir + '/cal-cache-' + calendar.id + '.ics';
         const fileContents = await fs.readFile(file, 'utf8');
 
         const icalExpander = new IcalExpander({ ics: fileContents, maxIterations: 100 });

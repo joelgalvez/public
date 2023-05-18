@@ -34,5 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/ics-cache
+/ics-cache/cal-cache-*
 /prisma/*.db
